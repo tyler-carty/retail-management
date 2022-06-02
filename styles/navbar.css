@@ -1,0 +1,42 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E8E6FE;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    line-height: 400%;
+    border: 2px solid #808080;
+}
+
+li{
+    float: left;
+}
+
+li.page{
+    width: 13%;
+}
+
+li.header{
+    font-family: "Segoe UI Light", serif;
+    font-size: xxx-large;
+    width: 22%;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a.page:hover {
+    background-color: #C3BDFF;
+}
+
+.active {
+    background-color: #C3BDFF;
+}

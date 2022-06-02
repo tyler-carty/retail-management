@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Management</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <ul>
+        <li class="header"><a class="header" href="index.html">Retail Manager</a></li>
+        <li class="page"><a class="page" href="index.html">Sales Processing</a></li>
+        <li class="page"><a class="page" href="stockquery.html">Stock Query</a></li>
+        <li class="page"><a class="page" href="stockaudit.html">Stock Audit</a></li>
+        <li class="page"><a class="page" href="salesanalysis.html">Sales Analytics</a></li>
+        <li class="page"><a class="active" href="employeemanagement.html">Employee Management</a></li>
+        <li class="page"><a class="page" href="barcodegeneration.html">Barcode Generation</a></li>
+    </ul>
+
+    </br></br></br>
+
+    <!-- CONTAINER -->
+    <div class="content">
+        <div class="table_container">
+            <table class="sales_proc_table">
+                <tr>
+                    <th>Employee Search</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="controls">
+                            <div class="search-container">
+                                <form name="myform" id="myForm" onSubmit="return false">
+                                    <input
+                                            type="text"
+                                            id="myVal"
+                                            placeholder="Search by ID / Name&hellip;"
+                                            class="search-input"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div id="employee-data-tabular" class="row">
+
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--- START OF SIDEBARS -->
+
+    <div id="shiftPanel" class="sideTabular right">
+        <a href="javascript:void(0)" class="closebtn right">&times;</a>
+        <div class="tabular-content">
+            <div class="separate-content">
+                <h3 class="tabular-title">Employee Shift Summary</h3>
+            </div>
+
+            </br>
+
+            <div class="tabular-row">
+                <p class="tabular-text" style="width: 30%; font-weight: bold">Shift ID</p>
+                <p class="tabular-text" style="width: 35%; font-weight: bold">Date</p>
+                <p class="tabular-text" style="width: 35%; font-weight: bold">Hours</p>
+            </div>
+
+            <div class="tabular-row">
+                <p id="shiftIDSummary" class="tabular-text" style="width: 30%"></p>
+                <p id="shiftDateSummary" class="tabular-text" style="width: 35%"></p>
+                <p id="shiftHoursSummary" class="tabular-text" style="width: 35%"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="scripts/employee_management.js" type="module"></script>
+</html>

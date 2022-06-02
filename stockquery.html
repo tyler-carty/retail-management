@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Management</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<ul>
+    <li class="header"><a class="header" href="index.html">Retail Manager</a></li>
+    <li class="page"><a class="page" href="index.html">Sales Processing</a></li>
+    <li class="page"><a class="active" href="stockquery.html">Stock Query</a></li>
+    <li class="page"><a class="page" href="stockaudit.html">Stock Audit</a></li>
+    <li class="page"><a class="page" href="salesanalysis.html">Sales Analytics</a></li>
+    <li class="page"><a class="page" href="employeemanagement.html">Employee Management</a></li>
+    <li class="page"><a class="page" href="barcodegeneration.html">Barcode Generation</a></li>
+</ul>
+
+    </br></br></br>
+
+    <!-- CONTAINER -->
+    <div class="content">
+
+        <table class="sales_proc_table">
+            <tr>
+                <th>Check Stock Level</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="search-container">
+                        <form name="myform" id="myForm" onSubmit="return false">
+                            <input
+                                    type="text"
+                                    id="myVal"
+                                    placeholder="Search Items Using EAN&hellip;"
+                                    class="search-input"
+                            />
+                        </form>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <table class="recent_items_table", id="recentitems_table">
+                        <tr style="font-size: medium;">
+                            <th style="width: 200px; text-align: left">Item Name:</th>
+                            <th></th>
+                        </tr>
+                        <tr style="font-size: medium;">
+                            <th style="width: 200px; text-align: left">Item Price:</th>
+                            <th></th>
+                        </tr>
+                        <tr style="font-size: medium;">
+                            <th style="width: 200px; text-align: left">Item Size:</th>
+                            <th></th>
+                        </tr>
+                        <tr style="font-size: medium;">
+                            <th style="width: 200px; text-align: left">Item SKU:</th>
+                            <th></th>
+                        </tr>
+                        <tr style="font-size: medium;">
+                            <th style="width: 200px; text-align: left">Item Stock Level:</th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a id="viewStockBtn" class="btn btn-unselected">
+                        Check Stock for Similar Items
+                    </a>
+                </th>
+            </tr>
+        </table>
+
+    </div>
+
+    <!--- START OF SIDEBARS -->
+
+    <div id="stockPanel" class="sideTabular right">
+        <a href="javascript:void(0)" class="closebtn right">&times;</a>
+        <div class="tabular-content">
+            <div class="separate-content">
+                <h3 class="tabular-title">Similar Stock Summary</h3>
+            </div>
+
+            </br>
+
+            <div class="tabular-row">
+                <p class="tabular-text" style="width: 70%; font-weight: bold">Name</p>
+                <p class="tabular-text" style="width: 15%; font-weight: bold">Size</p>
+                <p class="tabular-text" style="width: 15%; font-weight: bold">Stock</p>
+            </div>
+
+            <div class="tabular-row">
+                <p id="stockNameSummary" class="tabular-text" style="width: 70%"></p>
+                <p id="stockSizeSummary" class="tabular-text" style="width: 15%"></p>
+                <p id="stockStockSummary" class="tabular-text" style="width: 15%"></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="scripts/stock_query.js" type="text/javascript"></script>
+</html>

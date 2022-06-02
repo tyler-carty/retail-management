@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Management</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/jquery-1.10.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <ul>
+        <li class="header"><a class="header" href="index.html">Retail Manager</a></li>
+        <li class="page"><a class="page" href="index.html">Sales Processing</a></li>
+        <li class="page"><a class="page" href="stockquery.html">Stock Query</a></li>
+        <li class="page"><a class="page" href="stockaudit.html">Stock Audit</a></li>
+        <li class="page"><a class="active" href="salesanalysis.html">Sales Analytics</a></li>
+        <li class="page"><a class="page" href="employeemanagement.html">Employee Management</a></li>
+        <li class="page"><a class="page" href="barcodegeneration.html">Barcode Generation</a></li>
+    </ul>
+
+    </br></br></br>
+
+    <!-- CONTAINER -->
+    <div class="content">
+        <div class="table_container">
+            <table class="sales_proc_table">
+                <tr>
+                    <th>Sales Analysis Visualisation</th>
+                </tr>
+                <tr>
+                    <th>
+                        <div class="controls">
+                            <div class="search-container">
+                                <form name="myform" id="myForm" onSubmit="return false">
+                                    <input
+                                            type="text"
+                                            id="myVal"
+                                            placeholder="Search Items Using EAN&hellip;"
+                                            class="search-input"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <a id="sortH2L" class="btn btn-unselected">
+                                Sort by Best Selling Items
+                            </a>
+                            <a id="sortL2H" class="btn btn-unselected">
+                                Sort by Worst Selling Items
+                            </a>
+                            <a id="visBest" class="btn btn-unselected">
+                                Visualise Best Selling Items
+                            </a>
+                            <a id="visWorst" class="btn btn-unselected">
+                                Visualise Worst Selling Items
+                            </a>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <div id="sales-analysis-tabular" class="row">
+
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--- START OF SIDEBARS -->
+
+    <div id="sellingChartSidebar" class="sideTabular chart" style="height: 350px">
+        <a href="javascript:void(0)" class="closebtn chart">&times;</a>
+        <div class="tabular-content">
+            <div class="chartCard">
+                <div class="chartBox" style="height: 350px">
+                    <canvas id="sellingChart">
+
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="scripts/sales_analysis.js" type="module"></script>
+</html>

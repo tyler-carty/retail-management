@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retail Management</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<ul>
+    <li class="header"><a class="header" href="index.html">Retail Manager</a></li>
+    <li class="page"><a class="page" href="index.html">Sales Processing</a></li>
+    <li class="page"><a class="page" href="stockquery.html">Stock Query</a></li>
+    <li class="page"><a class="page" href="stockaudit.html">Stock Audit</a></li>
+    <li class="page"><a class="page" href="salesanalysis.html">Sales Analytics</a></li>
+    <li class="page"><a class="page" href="employeemanagement.html">Employee Management</a></li>
+    <li class="page"><a class="active" href="barcodegeneration.html">Barcode Generation</a></li>
+</ul>
+
+</br></br></br>
+
+<!-- CONTAINER -->
+<div class="content">
+
+    <table class="sales_proc_table">
+        <tr>
+            <th>Generate Barcodes</th>
+        </tr>
+        <tr>
+            <th>
+                <div class="search-container">
+                    <form name="myform" id="myForm" onSubmit="return false">
+                        <input
+                                type="text"
+                                id="myVal"
+                                placeholder="Enter Barcode to Generate&hellip;"
+                                class="search-input"
+                        />
+                    </form>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>
+
+                <div id="barcode_container">
+                    <svg id="barcode">
+
+                    </svg>
+                </div>
+            </th>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/barcode_generation.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</html>

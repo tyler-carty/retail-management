@@ -1,0 +1,79 @@
+.content{
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+
+    border: 1px solid #808080;
+    background-color: #C3BDFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.table_container{
+    max-height: 50%;
+    display: flex;
+    overflow: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #C3BDFF;
+    border-radius: 5px;
+}
+
+.sales_proc_table{
+    overflow: auto;
+    width: 100%;
+    background-color: #C3BDFF;
+
+    border-collapse:separate;
+    border-spacing:1em;
+}
+
+.sales_summ_table{
+    overflow: auto;
+    width: 100%;
+    max-width: content-box;
+    background-color: #C3BDFF;
+
+    border-collapse:separate;
+    border-spacing:1em;
+}
+
+.recent_items_table{
+    width: 100%;
+    background-color: #C3BDFF;
+
+    border-collapse:separate;
+    border-spacing:1em;
+}
+
+.sales_proc_table tr,.sales_summ_table tr{
+    padding-bottom: 1em;
+    border-bottom: 2px solid #808080;
+}
+
+.recent_items_table tr{
+    display: none;
+}
+
+.btn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 400;
+    color: #000000;
+    background-color: #f6efe5;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.btn:hover {
+    background-color: rgba(246, 239, 229, 0.5);
+    transition: 0.5s;
+}

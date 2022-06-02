@@ -1,0 +1,10 @@
+@import "navbar.css";
+@import "sales_proc.css";
+@import "search.css";
+@import "sidebar.css";
+@import "controls.css";
+@import "stock_audit_table.css";
+
+body{
+    font-family: "Segoe UI", serif;
+}

@@ -1,0 +1,6 @@
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2em 0em;
+}
